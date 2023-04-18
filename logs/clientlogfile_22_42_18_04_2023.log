@@ -1,0 +1,18 @@
+2023-04-18 22:42:57,968 - discovery-api-client - ERROR - 500 Server Error: Internal Server Error for url: https://discovery.nationalarchives.gov.uk/API/redirection/notfound?aspxerrorpath=/API/records/v1/details/
+Traceback (most recent call last):
+  File "F:\Dominic\discovery_client\discovery-api-client\main.py", line 92, in get_record
+    response.raise_for_status() #needed for logging http errors
+  File "C:\Users\User1\AppData\Roaming\Python\Python37\site-packages\requests\models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: https://discovery.nationalarchives.gov.uk/API/redirection/notfound?aspxerrorpath=/API/records/v1/details/
+2023-04-18 22:42:58,557 - discovery-api-client - ERROR - Extra data: line 2 column 23 (char 23)
+Traceback (most recent call last):
+  File "F:\Dominic\discovery_client\discovery-api-client\main.py", line 66, in open_json
+    json_object = json.load(f)
+  File "C:\Program Files\Python37\lib\json\__init__.py", line 296, in load
+    parse_constant=parse_constant, object_pairs_hook=object_pairs_hook, **kw)
+  File "C:\Program Files\Python37\lib\json\__init__.py", line 348, in loads
+    return _default_decoder.decode(s)
+  File "C:\Program Files\Python37\lib\json\decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 2 column 23 (char 23)
